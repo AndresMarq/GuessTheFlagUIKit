@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9L-m2-85q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlagUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIq-np-uzh">
+                                <rect key="frame" x="107" y="150" width="200" height="100"/>
+                                <state key="normal" image="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23q-QE-Wqs">
+                                <rect key="frame" x="107" y="410" width="200" height="100"/>
+                                <state key="normal" image="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-Tq-igj">
+                                <rect key="frame" x="107" y="282" width="200" height="100"/>
+                                <state key="normal" image="us"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nIq-np-uzh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="0Xo-oV-xN9"/>
+                            <constraint firstItem="nIq-np-uzh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C5B-AI-KBt"/>
+                            <constraint firstItem="o4w-Tq-igj" firstAttribute="top" secondItem="nIq-np-uzh" secondAttribute="bottom" constant="32" id="efT-ye-ucf"/>
+                            <constraint firstItem="23q-QE-Wqs" firstAttribute="top" secondItem="o4w-Tq-igj" secondAttribute="bottom" constant="28" id="flF-oL-cJ1"/>
+                            <constraint firstItem="o4w-Tq-igj" firstAttribute="centerX" secondItem="nIq-np-uzh" secondAttribute="centerX" id="jFr-ud-TD2"/>
+                            <constraint firstItem="23q-QE-Wqs" firstAttribute="centerX" secondItem="o4w-Tq-igj" secondAttribute="centerX" id="m6S-Do-PMw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XRM-Rm-6KR"/>
+                    <connections>
+                        <outlet property="button1" destination="nIq-np-uzh" id="DWv-xh-0xJ"/>
+                        <outlet property="button2" destination="o4w-Tq-igj" id="pf9-3P-8CW"/>
+                        <outlet property="button3" destination="23q-QE-Wqs" id="JiA-yG-eC4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="76.339285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i2J-hr-1hb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G9L-m2-85q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hYC-iA-ieM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nA4-sp-aPh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kR5-6p-O3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
