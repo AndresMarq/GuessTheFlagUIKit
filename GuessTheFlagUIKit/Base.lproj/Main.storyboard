@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIq-np-uzh">
                                 <rect key="frame" x="107" y="150" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nIq-np-uzh" secondAttribute="height" multiplier="2:1" id="8cW-NO-oIP"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GPm-fk-FpF"/>
@@ -25,6 +28,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23q-QE-Wqs">
                                 <rect key="frame" x="107" y="410" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="23q-QE-Wqs" secondAttribute="height" multiplier="2:1" id="jkO-pF-9a9"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQm-SA-SUA"/>
@@ -32,6 +38,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4w-Tq-igj">
                                 <rect key="frame" x="107" y="282" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o4w-Tq-igj" secondAttribute="height" multiplier="2:1" id="9vU-Tu-A48"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6B-EA-92G"/>
@@ -43,10 +52,13 @@
                         <constraints>
                             <constraint firstItem="nIq-np-uzh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="0Xo-oV-xN9"/>
                             <constraint firstItem="nIq-np-uzh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C5B-AI-KBt"/>
+                            <constraint firstItem="23q-QE-Wqs" firstAttribute="height" secondItem="o4w-Tq-igj" secondAttribute="height" id="QYk-9z-IK9"/>
                             <constraint firstItem="o4w-Tq-igj" firstAttribute="top" secondItem="nIq-np-uzh" secondAttribute="bottom" constant="32" id="efT-ye-ucf"/>
                             <constraint firstItem="23q-QE-Wqs" firstAttribute="top" secondItem="o4w-Tq-igj" secondAttribute="bottom" constant="28" id="flF-oL-cJ1"/>
+                            <constraint firstItem="o4w-Tq-igj" firstAttribute="height" secondItem="nIq-np-uzh" secondAttribute="height" id="hFQ-1e-K1Q"/>
                             <constraint firstItem="o4w-Tq-igj" firstAttribute="centerX" secondItem="nIq-np-uzh" secondAttribute="centerX" id="jFr-ud-TD2"/>
                             <constraint firstItem="23q-QE-Wqs" firstAttribute="centerX" secondItem="o4w-Tq-igj" secondAttribute="centerX" id="m6S-Do-PMw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="23q-QE-Wqs" secondAttribute="bottom" constant="20" id="qBa-qS-OFY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XRM-Rm-6KR"/>
@@ -70,6 +82,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b77-1M-Zuy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nA4-sp-aPh"/>
                     </connections>
