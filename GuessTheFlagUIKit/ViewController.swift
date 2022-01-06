@@ -16,9 +16,22 @@ class ViewController: UIViewController {
     var score = 0
     var correctAnswer = 0
     var questionCount = 0
+    var highScore = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = UserDefaults.standard
+
+        if let savedScore = defaults.object(forKey: "highScore") as? Data {
+            let jsonDecoder = JSONDecoder()
+
+            do {
+                highScore = try jsonDecoder.decode(Int.self, from: savedScore)
+            } catch {
+                print("Failed to load Highest Score")
+            }
+        }
         
         countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
         
@@ -54,7 +67,13 @@ class ViewController: UIViewController {
         if sender.tag == correctAnswer {
             title = "Correct!"
             score += 1
-            message = "Your score is \(score)"
+            if score > highScore {
+                message = "Your score is \(score). This is your highest score!"
+                highScore = score
+                save()
+            } else {
+                message = "Your score is \(score)"
+            }
         } else {
             title = "Wrong"
             score -= 1
@@ -79,5 +98,15 @@ class ViewController: UIViewController {
         //Required so it doesnt crash on iPad
         vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(vc, animated: true)
+    }
+    
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(highScore) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "highScore")
+        } else {
+            print("Failed to save Highest Score.")
+        }
     }
 }
